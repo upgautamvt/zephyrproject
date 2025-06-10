@@ -1,6 +1,6 @@
 [submodule "zephyr"]
 path = zephyr
-url = N/A
+url = https://github.com/zephyrproject-rtos/zephyr
 
 [submodule "modules/lib/acpica"]
 path = modules/lib/acpica
