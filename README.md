@@ -24,6 +24,8 @@ Inside ~/zephyrproject, create files .gitignore, .gitmodules, and create_gitmodu
 ```
 
 ## create_gitmodules.py
+I created this python script becasue this project contains so many git submodules inside (recursively nested), and I needed to scan and list all them in my root's .gitsubmodules. To get their corresponding remote url, I ran ` west list -f '{path}: {url}'`
+
 ```python
 import os
 import subprocess
