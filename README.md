@@ -7,6 +7,8 @@ sudo apt install python3-venv
 python3 -m venv ~/zephyrproject/.venv
 source ~/zephyrproject/.venv/bin/activate
 pip install -U west
+echo 'export PATH=~/.local/bin:"$PATH"' >> ~/.bashrc
+source ~/.bashrc
 west init ~/zephyrproject
 cd ~/zephyrproject
 west update
