@@ -6,7 +6,7 @@ sudo apt install --no-install-recommends git cmake ninja-build gperf   ccache df
 sudo apt install python3-venv
 python3 -m venv ~/zephyrproject/.venv
 source ~/zephyrproject/.venv/bin/activate
-(pip install -U west) (or pip install -r ~/zephyrproject/zephyr/scripts/requirements.txt)
+pip install -r ~/zephyrproject/zephyr/scripts/requirements.txt
 west init ~/zephyrproject
 cd ~/zephyrproject
 west update
