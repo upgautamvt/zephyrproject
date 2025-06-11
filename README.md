@@ -167,7 +167,3 @@ if __name__ == '__main__':
 ```
 
 And, now run `python ./create_gitmodules.py`. Done!
-
-
-Run python ./create_gitmodules.py
-
