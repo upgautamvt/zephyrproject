@@ -16,6 +16,7 @@ west init ~/zephyrproject
 cd ~/zephyrproject
 west update
 west zephyr-export
+west packages pip --install
 (we can even put everything in virtual env: pip install -r ~/zephyrproject/zephyr/scripts/requirements.txt)
 cd ~/zephyrproject/zephyr
 west sdk install
