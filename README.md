@@ -22,7 +22,15 @@ cd ~/zephyrproject/zephyr
 west sdk install
 ```
 
-Now, you can still stay on directory ~/zephyrproject/zephyr, and trigger the build or flash or do everything from that directory.
+Now, configure zephyr related environment variables. More here: https://docs.zephyrproject.org/latest/develop/env_vars.html
+
+``bash
+export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
+export ZEPHYR_SDK_INSTALL_DIR=/root/SDK/zephyr-sdk-0.11.2
+export ZEPHYR_BASE=/root/BlueSWAT/ZephyrOS/zephyr
+```
+
+Now, you can still stay on directory ~/zephyrproject/zephyr, and trigger the build or flash or do everything from that directory. Make sure you connect board before flashing. Sometimes, flash may not work because of udev not configured. 
 
 ```bash
 cd ~/zephyrproject/zephyr
