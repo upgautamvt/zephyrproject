@@ -43,7 +43,7 @@ west build -p always -b nrf52840_pca10056 samples/basic/blinky
 
 # or you can build sample helloword application in QEMU
 # From the root of the zephyr repository
-west build -b qemu_x86 samples/hello_world
+west build -p always -b qemu_x86 -d build_hello samples/hello_world
 west build -t run
 ```
 
