@@ -22,6 +22,15 @@ cd ~/zephyrproject/zephyr
 west sdk install
 ```
 
+Now, you can still stay on directory ~/zephyrproject/zephyr, and trigger the build or flash or do everything from that directory.
+
+```bash
+cd ~/zephyrproject/zephyr
+# west build -p always -b <board_soc> samples/basic/blinky
+west build -p always -b nrf52840_pca10056 ../peripheral
+west flash
+```
+
 Inside ~/zephyrproject, create files .gitignore, .gitmodules, and create_gitmodules.py
 
 ## .gitignore
