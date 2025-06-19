@@ -17,10 +17,12 @@ cd ~/zephyrproject
 west update
 west zephyr-export
 west packages pip --install
-(we can even put everything in virtual env: pip install -r ~/zephyrproject/zephyr/scripts/requirements.txt)
+(or, as alternative, we can even put everything in virtual env: pip install -r ~/zephyrproject/zephyr/scripts/requirements.txt)
 cd ~/zephyrproject/zephyr
 west sdk install
 ```
+
+By default, sdk gets intalled in ~/zephyr-sdk-<version>/
 
 Now, configure zephyr related environment variables. More here: https://docs.zephyrproject.org/latest/develop/env_vars.html
 
@@ -34,9 +36,15 @@ Now, you can still stay on directory ~/zephyrproject/zephyr, and trigger the bui
 
 ```bash
 cd ~/zephyrproject/zephyr
+
 # west build -p always -b <board_soc> samples/basic/blinky
 # west build -p always -b nrf52840_pca10056 samples/basic/blinky
 west build -p always -b nrf52840_pca10056 samples/basic/blinky
+
+# or you can build sample helloword application in QEMU
+# From the root of the zephyr repository
+west build -b qemu_x86 samples/hello_world
+west build -t run
 ```
 
 Setting Udev rules, 
