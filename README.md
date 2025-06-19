@@ -26,8 +26,8 @@ Now, configure zephyr related environment variables. More here: https://docs.zep
 
 ```bash
 export ZEPHYR_TOOLCHAIN_VARIANT=zephyr
-export ZEPHYR_SDK_INSTALL_DIR=/root/SDK/zephyr-sdk-0.11.2
-export ZEPHYR_BASE=/root/BlueSWAT/ZephyrOS/zephyr
+export ZEPHYR_SDK_INSTALL_DIR=/home/upgautamvt/zephyr-sdk-0.17.1
+export ZEPHYR_BASE=/home/upgautamvt/zephyrproject/zephyr
 ```
 
 Now, you can still stay on directory ~/zephyrproject/zephyr, and trigger the build or flash or do everything from that directory. Make sure you connect board before flashing. Sometimes, flash may not work because of udev not configured. 
@@ -35,7 +35,8 @@ Now, you can still stay on directory ~/zephyrproject/zephyr, and trigger the bui
 ```bash
 cd ~/zephyrproject/zephyr
 # west build -p always -b <board_soc> samples/basic/blinky
-west build -p always -b nrf52840_pca10056 ../peripheral
+# west build -p always -b nrf52840_pca10056 samples/basic/blinky
+west build -p always -b nrf52840_pca10056 samples/basic/blinky
 ```
 
 Setting Udev rules, 
