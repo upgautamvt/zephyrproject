@@ -39,6 +39,24 @@ west build -p always -b nrf52840_pca10056 ../peripheral
 west flash
 ```
 
+Setting Udev rules, 
+Udev is a device manager for the Linux kernel and the udev daemon handles all user space events raised when a hardware device is added (or removed) from the system. We can add a rules file to grant access permission by non-root users to certain USB-connected devices.
+
+Either download the OpenOCD rules file and copy it to the right location
+```bash
+wget -O 60-openocd.rules https://sf.net/p/openocd/code/ci/master/tree/contrib/60-openocd.rules?format=raw
+sudo cp 60-openocd.rules /etc/udev/rules.d
+```
+or copy the rules file from the Zephyr SDK folder,
+```bash
+sudo cp ${ZEPHYR_SDK_INSTALL_DIR}/sysroots/x86_64-pokysdk-linux/usr/share/openocd/contrib/60-openocd.rules /etc/udev/rules.d
+```
+Now, reload udev daemon,
+```bash
+sudo udevadm control --reload
+```
+Unplug and plug in the USB connection to your board, and you should have permission to access the board hardware for flashing.
+
 
 Inside ~/zephyrproject, create files .gitignore, .gitmodules, and create_gitmodules.py
 
