@@ -18,7 +18,6 @@ west update
 west zephyr-export
 west packages pip --install
 (or, as alternative, we can even put everything in virtual env: pip install -r ~/zephyrproject/zephyr/scripts/requirements.txt)
-cd ~/zephyrproject/zephyr
 west sdk install
 ```
 
@@ -35,7 +34,7 @@ export ZEPHYR_BASE=/home/upgautamvt/zephyrproject/zephyr
 Now, you can still stay on directory ~/zephyrproject/zephyr, and trigger the build or flash or do everything from that directory. Make sure you connect board before flashing. Sometimes, flash may not work because of udev not configured. 
 
 ```bash
-cd ~/zephyrproject/zephyr
+cd ~/zephyrproject
 
 # west build -p always -b <board_soc> samples/basic/blinky
 # west build -p always -b nrf52840_pca10056 samples/basic/blinky
