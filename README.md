@@ -36,13 +36,13 @@ Now, you can still stay on directory ~/zephyrproject/zephyr, and trigger the bui
 ```bash
 cd ~/zephyrproject
 
-# west build -p always -b <board_soc> samples/basic/blinky
-# west build -p always -b nrf52840_pca10056 samples/basic/blinky
-west build -p always -b nrf52840_pca10056 samples/basic/blinky
+# west build -p always -b <board_soc> zephyr/samples/basic/blinky
+# west build -p always -b nrf52840_pca10056 zephyr/samples/basic/blinky
+west build -p always -b nrf52840_pca10056 zephyr/samples/basic/blinky
 
 # or you can build sample helloword application in QEMU
 # From the root of the zephyr repository
-west build -p always -b qemu_x86 -d build_hello samples/hello_world
+west build -p always -b qemu_x86 -d build_hello zephyr/samples/hello_world
 west build -t run
 ```
 
