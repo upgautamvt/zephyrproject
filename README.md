@@ -46,6 +46,17 @@ west build -p always -b qemu_x86 -d build_hello zephyr/samples/hello_world
 west build -t run
 ```
 
+Running app natively,
+```bash
+upgautamvt@pc32gb:~/zephyrproject$ west build -p always -b native_sim -d build_native_sim zephyr/samples/hello_world
+upgautamvt@pc32gb:~/zephyrproject$ west build -t run
+or just run zephyr.exe directly:
+upgautamvt@pc32gb:~/zephyrproject$ ./build_native_sim/zephyr/zephyr.exe
+upgautamvt@pc32gb:~/zephyrproject$ file ./build_native_sim/zephyr/zephyr.exe
+./build_native_sim/zephyr/zephyr.exe: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), dynamically linked, interpreter /lid
+# Note. this is windows style .exe extension only. And they used keyword native_sim to build directly in Linux.
+```
+
 Setting Udev rules, 
 Udev is a device manager for the Linux kernel and the udev daemon handles all user space events raised when a hardware device is added (or removed) from the system. We can add a rules file to grant access permission by non-root users to certain USB-connected devices.
 
