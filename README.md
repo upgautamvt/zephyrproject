@@ -1,5 +1,5 @@
 # Setup
-Connect Nordic development kit (i.e., nRF52840dk) to USB J2 and put the toggle to VDD (not USB). Then `lsusb` will show SEGGER.. device you install SEGGET JLink software and complete all the below configuration. 
+Connect Nordic development kit (i.e., nRF52840dk) to USB J2 and put the toggle to VDD (not USB). Then `lsusb` will show SEGGER.. device you install SEGGET JLink software (Link: https://www.segger.com/downloads/jlink/
 
 ```bash
 sudo apt update
